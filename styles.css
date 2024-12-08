@@ -1,4 +1,3 @@
-/* Styles généraux */
 body {
   margin: 0;
   padding: 0;
@@ -6,17 +5,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #fff; /* Fond blanc */
-  background-image: url('pattern.png'); /* Utiliser le motif généré */
-  background-repeat: repeat; /* Répéter le motif */
-  background-size: 150px; /* Taille ajustable du motif */
-  font-family: 'Verdana, sans-serif'; /* À personnaliser avec la police du logo */
-  color: #333; /* Texte en couleur foncée pour contraste */
+  background-color: #fff; 
+  background-image: url('pattern.png');
+  background-repeat: repeat;
+  background-size: 150px; 
+  font-family: 'Verdana, sans-serif'; 
+  color: #333; 
   text-align: center;
   overflow: hidden;
 }
 
-/* Couche semi-transparente pour adoucir le fond (optionnel) */
 body::before {
   content: '';
   position: absolute;
@@ -24,46 +22,42 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.5); /* Légère transparence pour le motif */
+  background: rgba(255, 255, 255, 0.5); 
   z-index: 1;
 }
 
-/* Conteneur principal */
 .container {
   position: relative;
   z-index: 2;
 }
 
-/* Logo */
 .logo {
-  width: 200px; /* Ajuste selon le besoin */
-  height: auto;
-  margin-bottom: 20px;
-  animation: pulse 2s infinite;
+  width: 90%;  
+  max-width: 600px;  
+  height: auto;      
+  margin-bottom: 0px; 
+  animation: pulse 2s infinite; 
 }
 
-/* Animation de chargement */
 .loading-text {
   font-size: 1.8em;
   font-weight: bold;
-  color: #007bff; /* Couleur bleue pour attirer l'attention */
+  color: #007bff; 
   animation: blink 1.5s infinite;
 }
 
-/* Animation pulse pour le logo */
 @keyframes pulse {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
   }
 }
 
-/* Animation clignotante pour le texte */
 @keyframes blink {
   0%, 100% {
     opacity: 1;
