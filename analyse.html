@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Analyse - Gestion de Stock</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
   <div class="app-container">
@@ -31,6 +32,7 @@
         <h1>Analyse Globale</h1>
       </header>
 
+      <!-- Première ligne de cartes -->
       <section class="cards-container">
         <div class="card">
           <h3>Clients</h3>
@@ -49,14 +51,31 @@
           <p id="commande-count">0</p>
         </div>
       </section>
+
+      <!-- Deuxième ligne de cartes -->
+      <section class="cards-container">
+        <div class="card">
+          <h3>Valeur du stock</h3>
+          <p id="valeur-stock">0 FCFA</p>
+        </div>
+        <div class="card">
+          <h3>Article le plus vendu</h3>
+          <p id="article-top">N/A</p>
+        </div>
+        <div class="card">
+          <h3>Plus grosse vente</h3>
+          <p id="plus-grosse-vente">0 FCFA</p>
+        </div>
+      </section>
+
+      <!-- Graphique -->
       <section style="margin-top: 3rem;">
         <h2>Commandes par date</h2>
         <canvas id="commandesChart" height="100"></canvas>
-      </section>      
+      </section>
     </main>
   </div>
 
   <script src="analyse.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </body>
 </html>
