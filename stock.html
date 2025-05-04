@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Stock - Gestion de Stock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>StockApp</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li><a href="vente.html">Vente</a></li>
+          <li><a href="clients.html">Client</a></li>
+          <li><a href="articles.html">Article</a></li>
+          <li><a href="fournisseurs.html">Fournisseur</a></li>
+          <li><a href="commandes.html">Commande</a></li>
+          <li><a href="analyse.html">Analyse</a></li>
+          <li><a href="stock.html" class="active">Stock</a></li>
+          <li><a href="toutes_commandes.html">Toutes les commandes</a></li>
+          <li><a href="utilisateurs.html">Utilisateurs</a></li>
+          <li><a href="configuration.html">Configuration</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header>
+        <h1>État du Stock</h1>
+      </header>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nom</th>
+            <th>Référence</th>
+            <th>Quantité</th>
+            <th>Seuil critique</th>
+          </tr>
+        </thead>
+        <tbody id="stock-table-body">
+          <!-- Articles stockés -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="stock.js"></script>
+</body>
+</html>

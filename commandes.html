@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Commandes - Gestion de Stock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>StockApp</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li><a href="vente.html">Vente</a></li>
+          <li><a href="clients.html">Client</a></li>
+          <li><a href="articles.html">Article</a></li>
+          <li><a href="fournisseurs.html">Fournisseur</a></li>
+          <li><a href="commandes.html" class="active">Commande</a></li>
+          <li><a href="analyse.html">Analyse</a></li>
+          <li><a href="stock.html">Stock</a></li>
+          <li><a href="toutes_commandes.html">Toutes les commandes</a></li>
+          <li><a href="utilisateurs.html">Utilisateurs</a></li>
+          <li><a href="configuration.html">Configuration</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header>
+        <h1>Commandes</h1>
+      </header>
+
+      <section>
+        <form id="commande-form">
+          <input type="text" id="commande-ref" placeholder="Référence de commande" required />
+          <input type="text" id="commande-client" placeholder="Client ou Fournisseur" required />
+          <input type="date" id="commande-date" required />
+          <input type="text" id="commande-details" placeholder="Détails (article, quantité...)" required />
+          <button type="submit">Ajouter</button>
+        </form>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Réf</th>
+              <th>Client/Fournisseur</th>
+              <th>Date</th>
+              <th>Détails</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="commande-list"></tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+
+  <script src="commandes.js"></script>
+</body>
+</html>

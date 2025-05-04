@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Utilisateurs - StockApp</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>StockApp</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li><a href="vente.html">Vente</a></li>
+          <li><a href="clients.html">Client</a></li>
+          <li><a href="articles.html">Article</a></li>
+          <li><a href="fournisseurs.html">Fournisseur</a></li>
+          <li><a href="commandes.html">Commande</a></li>
+          <li><a href="analyse.html">Analyse</a></li>
+          <li><a href="stock.html">Stock</a></li>
+          <li><a href="toutes_commandes.html">Toutes les commandes</a></li>
+          <li><a href="utilisateurs.html" class="active">Utilisateurs</a></li>
+          <li><a href="configuration.html">Configuration</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header>
+        <h1>Liste des Utilisateurs</h1>
+        <button id="btn-ajouter-utilisateur">Ajouter un utilisateur</button>
+      </header>
+
+      <!-- Formulaire d'ajout ou modification -->
+      <div id="form-container" style="display: none;">
+        <h2 id="form-title">Ajouter un utilisateur</h2>
+        <form id="form-utilisateur">
+          <label for="nom">Nom d'utilisateur :</label>
+          <input type="text" id="nom" name="nom" required />
+
+          <label for="email">Email :</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="role">Rôle :</label>
+          <select id="role" name="role">
+            <option value="Administrateur">Administrateur</option>
+            <option value="Utilisateur">Utilisateur</option>
+          </select>
+
+          <button type="submit" id="form-submit-btn">Ajouter</button>
+          <button type="button" id="form-cancel-btn">Annuler</button>
+        </form>
+      </div>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Nom d'utilisateur</th>
+            <th>Email</th>
+            <th>Rôle</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="utilisateurs-table-body">
+          <!-- Utilisateurs ajoutés dynamiquement ici -->
+        </tbody>
+      </table>
+    </main>
+  </div>
+
+  <script src="utilisateurs.js"></script>
+</body>
+</html>

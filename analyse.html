@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Analyse - Gestion de Stock</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-container">
+    <aside class="sidebar">
+      <h2>StockApp</h2>
+      <nav>
+        <ul>
+          <li><a href="index.html">Tableau de bord</a></li>
+          <li><a href="vente.html">Vente</a></li>
+          <li><a href="clients.html">Client</a></li>
+          <li><a href="articles.html">Article</a></li>
+          <li><a href="fournisseurs.html">Fournisseur</a></li>
+          <li><a href="commandes.html">Commande</a></li>
+          <li><a href="analyse.html" class="active">Analyse</a></li>
+          <li><a href="stock.html">Stock</a></li>
+          <li><a href="toutes_commandes.html">Toutes les commandes</a></li>
+          <li><a href="utilisateurs.html">Utilisateurs</a></li>
+          <li><a href="configuration.html">Configuration</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="dashboard">
+      <header>
+        <h1>Analyse Globale</h1>
+      </header>
+
+      <section class="cards-container">
+        <div class="card">
+          <h3>Clients</h3>
+          <p id="client-count">0</p>
+        </div>
+        <div class="card">
+          <h3>Fournisseurs</h3>
+          <p id="fournisseur-count">0</p>
+        </div>
+        <div class="card">
+          <h3>Articles</h3>
+          <p id="article-count">0</p>
+        </div>
+        <div class="card">
+          <h3>Commandes</h3>
+          <p id="commande-count">0</p>
+        </div>
+      </section>
+      <section style="margin-top: 3rem;">
+        <h2>Commandes par date</h2>
+        <canvas id="commandesChart" height="100"></canvas>
+      </section>      
+    </main>
+  </div>
+
+  <script src="analyse.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
